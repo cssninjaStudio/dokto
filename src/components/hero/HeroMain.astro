@@ -1,0 +1,77 @@
+---
+import ButtonMain from "@components/base/ButtonMain.astro";
+import ButtonSub from "@components/base/ButtonSub.astro";
+import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
+---
+
+<div
+  class="min-h-screen w-full overflow-hidden bg-muted-100 dark:bg-muted-1000"
+>
+  <div class="min-h-screen w-full max-w-7xl mx-auto flex items-center px-4">
+    <div class="w-full grid grid-cols-12">
+      <div class="col-span-12 ltablet:col-span-5 lg:col-span-5">
+        <div
+          class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-8 ltablet:mb-0 lg:mb-0"
+        >
+          <div
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
+          >
+            <h1
+              class="font-medium text-4xl md:text-5xl text-muted-800 dark:text-white"
+            >
+              We help you find the Doctor you need
+            </h1>
+            <p class="text-lg text-muted-500 dark:text-muted-400">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tibi hoc
+              incredibile, quod beatissimum. Quamquam te quidem video minime
+              esse deterritum.
+            </p>
+            <div
+              class="w-full flex items-center justify-center ltablet:justify-start lg:justify-start gap-2"
+            >
+              <ButtonMain to={"/home"} class="'min-w-[130px]'"
+                >Get Started</ButtonMain
+              >
+              <ButtonSub to={"/home"} class="'min-w-[130px]'">Explore</ButtonSub
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative col-span-12 ltablet:col-span-7 lg:col-span-7">
+        <img
+          src="/img/illustrations/hero.svg"
+          class="block dark:hidden w-full max-w-[620px] mx-auto"
+          alt="Hero image"
+        />
+        <img
+          src="/img/illustrations/hero-dark.svg"
+          class="hidden dark:block w-full max-w-[620px] mx-auto"
+          alt="Hero image"
+        />
+        <!-- Decoration -->
+        <div
+          class="absolute top-6 left-0 h-14 w-14 flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+          💊
+        </div>
+        <div
+          class="absolute top-24 left-24 h-10 w-10 flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+          ⚕️
+        </div>
+        <div
+          class="absolute -bottom-10 right-0 h-16 w-16 flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+          💉
+        </div>
+        <div
+          class="absolute -top-12 left-1/3 h-16 w-16 flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+          🦠
+        </div>
+        <HeroMainModuleOne />
+      </div>
+    </div>
+  </div>
+</div>

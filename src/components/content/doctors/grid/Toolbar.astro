@@ -1,0 +1,96 @@
+<div
+  class="sticky top-24 md:top-20 w-full flex bg-white dark:bg-muted-800 border border-muted-200 dark:border-muted-700 rounded divide-x divide-muted-200 dark:divide-muted-700 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/30 overflow-x-auto z-30"
+>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'all' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'all'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'all' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:first-aid-duotone"></i>
+    </span>
+    <span>All</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'general' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'general'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'general' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:person-duotone"></i>
+    </span>
+    <span>General</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'cardiology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'cardiology'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'cardiology' ? 'text-rose-500' : ' text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:heartbeat-duotone"></i>
+    </span>
+    <span>Cardiology</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'neurology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'neurology'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'neurology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:brain-duotone"></i>
+    </span>
+    <span>Neurology</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'gynaecology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'gynaecology'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'gynaecology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:baby-duotone"></i>
+    </span>
+    <span>Gynaecology</span>
+  </button>
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'surgery' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'surgery'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'surgery' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:syringe-duotone"></i>
+    </span>
+    <span>Surgery</span>
+  </button>
+
+  <button
+    class="group flex-1 flex items-center px-5 py-3 whitespace-nowrap font-sans text-muted-800 dark:text-muted-100 hover:bg-muted-50 dark:hover:bg-muted-700 transition-colors duration-300"
+    :class="activeCategory === 'dermatology' ? 'bg-muted-50 dark:bg-muted-700' : ''"
+    @click="activeCategory = 'dermatology'"
+  >
+    <span
+      class="flex items-center justify-center h-10 w-10"
+      :class="activeCategory === 'dermatology' ? 'text-rose-500' : 'text-muted-400 group-hover:text-primary-500'"
+    >
+      <i class="iconify w-6 h-6" data-icon="ph:hand-soap-duotone"></i>
+    </span>
+    <span>Dermatology</span>
+  </button>
+</div>

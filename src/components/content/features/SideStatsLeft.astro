@@ -1,0 +1,65 @@
+---
+import MockupTwo from '@components/mockup/MockupTwo.astro';
+---
+
+<div class="flex flex-col-reverse md:flex-row items-center py-6">
+  <!--Column-->
+  <div class="w-full md:w-1/2 relative p-6">
+    <!--Feature-->
+    <MockupTwo />
+  </div>
+
+  <!--Column-->
+  <div class="w-full md:w-1/2 relative p-6">
+    <!--Section content-->
+    <div class="w-full max-w-lg space-y-4">
+      <!--Badge-->
+      <h4 class="font-sans font-semibold text-xs tracking-widest uppercase mb-3 text-primary-500">Remote Conversations</h4>
+      <!--Title-->
+      <h2
+        class="
+          font-heading font-medium
+          text-4xl text-muted-800
+          dark:text-white
+        "
+      >
+        Use messaging to keep up with your practician
+      </h2>
+      <!--Subtitle-->
+      <p class="font-sans text-lg text-muted-500 dark:text-muted-400">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum
+        Torquatus: Prorsus, inquit, assentior; Videmus igitur ut
+        conquiescere.
+      </p>
+      <!--Link-->
+      <a
+        href="#"
+        class="
+          group
+          inline-flex
+          items-center
+          gap-4
+          text-primary-500
+          hover:text-primary-400
+          transition-colors
+          duration-300
+        "
+      >
+        <span class="font-sans font-medium text-sm">
+          Learn more about our suite
+        </span>
+        <i
+          class="
+            iconify
+            w-4
+            h-4
+            group-hover:translate-x-1
+            transition-transform
+            duration-300
+          "
+          data-icon="lucide:arrow-right"
+        ></i>
+      </a>
+    </div>
+  </div>
+</div>

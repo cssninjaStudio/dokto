@@ -1,0 +1,9 @@
+---
+const { class: className, title, subtitle, minititle } = Astro.props;
+---
+
+<div class="w-full max-w-xl mb-14" :class={className}>
+  <h4 class="font-sans font-semibold text-xs tracking-widest uppercase mb-3 text-primary-500">{minititle}</h4>
+  <h2 class="font-sans text-4xl font-medium mb-4 text-muted-800 dark:text-muted-100">{title}</h2>
+  <p class="text-lg text-muted-500 dark:text-muted-400">{subtitle}</p>
+</div>

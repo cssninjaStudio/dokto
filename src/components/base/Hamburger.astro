@@ -1,0 +1,33 @@
+---
+const { class: className } = Astro.props;
+---
+
+<button
+  class="flex relative justify-center items-center w-10 h-10 focus:outline-none lg:hidden scale-90"
+  :class={className}
+  @click="$store.app.mobileOpen = !$store.app.mobileOpen"
+>
+  <div class="block top-1/2 left-6 w-4 -translate-x-1/2 -translate-y-1/2">
+    <span
+      class="block absolute w-7 h-0.5 bg-current transition duration-500 ease-in-out"
+      :class="[
+        $store.app.mobileOpen ? 'rotate-45' : '-translate-y-2',
+        scrolled || $store.app.mobileOpen ? 'text-primary-500' : 'text-muted-800 dark:text-white'
+      ]"
+    ></span>
+    <span
+      class="block absolute w-5 h-0.5 bg-current transition duration-500 ease-in-out"
+      :class="[
+        $store.app.mobileOpen ? 'opacity-0' : '',
+        scrolled || $store.app.mobileOpen ? 'text-primary-500' : 'text-muted-800 dark:text-white'
+      ]"
+    ></span>
+    <span
+      class="block absolute w-7 h-0.5 bg-current transition duration-500 ease-in-out"
+      :class="[
+        $store.app.mobileOpen ? '-rotate-45' : 'translate-y-2',
+        scrolled || $store.app.mobileOpen ? 'text-primary-500' : 'text-muted-800 dark:text-white'
+      ]"
+    ></span>
+  </div>
+</button>

@@ -1,0 +1,201 @@
+---
+import Polka from "@components/base/Polka.astro";
+import Card from "@components/base/Card.astro";
+---
+
+<div x-cloak class="relative overflow-hidden">
+  <div x-data="swiper()" class="carousel-container">
+    <div class="carousel-controls flex items-center justify-end mb-4">
+      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slidePrev()">
+        <i class="iconify" data-icon="lucide:arrow-left"></i>
+      </button>
+
+      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slideNext()">
+        <i class="iconify" data-icon="lucide:arrow-right"></i>
+      </button>
+    </div>
+    <div class="swiper-container" x-ref="container">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/3.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    John Bingner
+                  </h4>
+                  <p class="text-xs text-muted-400">Los Angeles, CA</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/2.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Maya Rosselini
+                  </h4>
+                  <p class="text-xs text-muted-400">Milano, IT</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/10.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Anna Galagher
+                  </h4>
+                  <p class="text-xs text-muted-400">New York, NY</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/9.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Maureen Stevens
+                  </h4>
+                  <p class="text-xs text-muted-400">San Diego, CA</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/11.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Arthur Baxter
+                  </h4>
+                  <p class="text-xs text-muted-400">London, UK</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+        <div class="swiper-slide">
+          <Card class="'p-6'">
+            <div class="w-full flex flex-col gap-8 font-sans">
+              <i
+                class="iconify w-8 h-8 text-primary-600 dark:text-rose-500"
+                data-icon="fa6-solid:quote-left"></i>
+              <p class="text-muted-500 dark:text-muted-300">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo id
+                est convenienter naturae vivere, a natura discedere. Duo Reges:
+                constructio interrete.
+              </p>
+              <div class="w-full flex items-center gap-3">
+                <div class="shrink-0 inline-flex relative w-10 h-10">
+                  <img
+                    src="https://media.cssninja.io/shuriken/avatars/16.svg"
+                    class="object-cover max-w-full rounded-full dark:border-transparent shadow-sm"
+                    alt="User image"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-medium text-sm text-muted-800 dark:text-muted-100">
+                    Matt Perret
+                  </h4>
+                  <p class="text-xs text-muted-400">Paris, FR</p>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

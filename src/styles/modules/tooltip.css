@@ -1,0 +1,177 @@
+/* Tooltip module */
+[tooltip] {
+  position: relative; /* opinion 1 */
+}
+
+/* Applies to all tooltips */
+[tooltip]::before,
+[tooltip]::after {
+  text-transform: none; /* opinion 2 */
+  font-size: 0.9em; /* opinion 3 */
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+  display: none;
+  opacity: 0;
+}
+[tooltip]::before {
+  content: "";
+  border: 5px solid transparent; /* opinion 4 */
+  z-index: 1001; /* absurdity 1 */
+}
+[tooltip]::after {
+  content: attr(tooltip); /* magic! */
+
+  /* most of the rest of this is opinion */
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+
+  /* 
+  Let the content set the size of the tooltips 
+  but this will also keep them from being obnoxious
+  */
+  @apply text-white font-sans text-xs bg-muted-800 dark:bg-muted-700 shadow-lg shadow-muted-800/20 dark:shadow-muted-700/10;
+  min-width: 3em;
+  max-width: 21em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 1ch 1.5ch;
+  border-radius: 0.5ch;
+  z-index: 1000; /* absurdity 2 */
+}
+
+/* Make the tooltips respond to hover */
+[tooltip]:hover::before,
+[tooltip]:hover::after,
+[tooltip]:focus::before,
+[tooltip]:focus::after,
+[tooltip]:focus-within::before,
+[tooltip]:focus-within::after {
+  display: block;
+}
+
+/* don't show empty tooltips */
+[tooltip=""]::before,
+[tooltip=""]::after {
+  display: none !important;
+}
+
+/* FLOW: UP */
+[tooltip]:not([flow])::before,
+[tooltip][flow^="up"]::before {
+  @apply text-muted-800 dark:text-muted-700;
+  bottom: calc(100% + 10px);
+  border-bottom-width: 0;
+  border-top-color: currentColor;
+}
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::after {
+  bottom: calc(100% + 15px);
+}
+[tooltip]:not([flow])::before,
+[tooltip]:not([flow])::after,
+[tooltip][flow^="up"]::before,
+[tooltip][flow^="up"]::after {
+  left: 50%;
+  transform: translate(-50%, -0.5em);
+}
+
+/* FLOW: DOWN */
+[tooltip][flow^="down"]::before {
+  @apply text-muted-800 dark:text-muted-700;
+  top: 100%;
+  border-top-width: 0;
+  border-bottom-color: currentColor;
+}
+[tooltip][flow^="down"]::after {
+  top: calc(100% + 5px);
+}
+[tooltip][flow^="down"]::before,
+[tooltip][flow^="down"]::after {
+  left: 50%;
+  transform: translate(-50%, 0.5em);
+}
+
+/* FLOW: LEFT */
+[tooltip][flow^="left"]::before {
+  @apply text-muted-800 dark:text-muted-700;
+  top: 50%;
+  border-right-width: 0;
+  border-left-color: currentColor;
+  left: calc(0em - 5px);
+  transform: translate(-0.5em, -50%);
+}
+[tooltip][flow^="left"]::after {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translate(-0.5em, -50%);
+}
+
+/* FLOW: RIGHT */
+[tooltip][flow^="right"]::before {
+  @apply text-muted-800 dark:text-muted-700;
+  top: 50%;
+  border-left-width: 0;
+  border-right-color: currentColor;
+  right: calc(0em - 5px);
+  transform: translate(0.5em, -50%);
+}
+[tooltip][flow^="right"]::after {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translate(0.5em, -50%);
+}
+
+/* KEYFRAMES */
+@keyframes tooltips-vert {
+  to {
+    opacity: 0.9;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes tooltips-horz {
+  to {
+    opacity: 0.9;
+    transform: translate(0, -50%);
+  }
+}
+
+/* FX All The Things */
+[tooltip]:not([flow]):hover::before,
+[tooltip]:not([flow]):hover::after,
+[tooltip][flow^="up"]:hover::before,
+[tooltip][flow^="up"]:hover::after,
+[tooltip][flow^="down"]:hover::before,
+[tooltip][flow^="down"]:hover::after,
+[tooltip]:not([flow]):focus::before,
+[tooltip]:not([flow]):focus::after,
+[tooltip][flow^="up"]:focus::before,
+[tooltip][flow^="up"]:focus::after,
+[tooltip][flow^="down"]:focus::before,
+[tooltip][flow^="down"]:focus::after,
+[tooltip]:not([flow]):focus-within::before,
+[tooltip]:not([flow]):focus-within::after,
+[tooltip][flow^="up"]:focus-within::before,
+[tooltip][flow^="up"]:focus-within::after,
+[tooltip][flow^="down"]:focus-within::before,
+[tooltip][flow^="down"]:focus-within::after {
+  animation: tooltips-vert 300ms ease-out forwards;
+}
+
+[tooltip][flow^="left"]:hover::before,
+[tooltip][flow^="left"]:hover::after,
+[tooltip][flow^="right"]:hover::before,
+[tooltip][flow^="right"]:hover::after,
+[tooltip][flow^="left"]:focus::before,
+[tooltip][flow^="left"]:focus::after,
+[tooltip][flow^="right"]:focus::before,
+[tooltip][flow^="right"]:focus::after,
+[tooltip][flow^="left"]:focus-within::before,
+[tooltip][flow^="left"]:focus-within::after,
+[tooltip][flow^="right"]:focus-within::before,
+[tooltip][flow^="right"]:focus-within::after {
+  animation: tooltips-horz 300ms ease-out forwards;
+}
