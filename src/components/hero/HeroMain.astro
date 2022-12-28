@@ -17,7 +17,7 @@ import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
             class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
           >
             <h1
-              class="font-medium text-4xl md:text-5xl text-muted-800 dark:text-white"
+              class="font-medium text-4xl ptablet:text-5xl lg:text-5xl text-muted-800 dark:text-white"
             >
               We help you find the Doctor you need
             </h1>
@@ -41,32 +41,32 @@ import HeroMainModuleOne from "@components/hero/HeroMainModuleOne.astro";
       <div class="relative col-span-12 ltablet:col-span-7 lg:col-span-7">
         <img
           src="/img/illustrations/hero.svg"
-          class="block dark:hidden w-full max-w-[620px] mx-auto"
+          class="block dark:hidden w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
           alt="Hero image"
         />
         <img
           src="/img/illustrations/hero-dark.svg"
-          class="hidden dark:block w-full max-w-[620px] mx-auto"
+          class="hidden dark:block w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
           alt="Hero image"
         />
         <!-- Decoration -->
         <div
-          class="absolute top-6 left-0 h-14 w-14 flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+          class="absolute top-6 left-0 h-14 w-14 hidden md:flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
         >
           💊
         </div>
         <div
-          class="absolute top-24 left-24 h-10 w-10 flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+          class="absolute top-24 left-24 h-10 w-10 hidden md:flex items-center justify-center rounded-full text-2xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
         >
           ⚕️
         </div>
         <div
-          class="absolute -bottom-10 right-0 h-16 w-16 flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+          class="absolute -bottom-10 right-0 h-16 w-16 hidden md:flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
         >
           💉
         </div>
         <div
-          class="absolute -top-12 left-1/3 h-16 w-16 flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+          class="absolute -top-12 left-1/3 h-16 w-16 hidden ptablet:hidden md:flex items-center justify-center rounded-full text-4xl bg-white dark:bg-muted-800 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
         >
           🦠
         </div>
