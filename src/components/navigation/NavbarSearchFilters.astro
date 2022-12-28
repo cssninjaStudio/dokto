@@ -1,0 +1,202 @@
+---
+import NavbarSearchFiltersOne from "@components/navigation/NavbarSearchFiltersOne.astro";
+import NavbarSearchFiltersTwo from "@components/navigation/NavbarSearchFiltersTwo.astro";
+import NavbarSearchFiltersThree from "@components/navigation/NavbarSearchFiltersThree.astro";
+import NavbarSearchFiltersFour from "@components/navigation/NavbarSearchFiltersFour.astro";
+import NavbarSearchFiltersFive from "@components/navigation/NavbarSearchFiltersFive.astro";
+---
+
+<!--Dropdown menu-->
+<div
+x-show="isFiltersOpen"
+x-transition
+class="
+  absolute
+  top-11
+  left-0
+  w-[660px]
+  ptablet:w-[580px]
+  grid grid-cols-12
+  bg-white
+  dark:bg-muted-1000
+  rounded-lg
+  overflow-hidden
+  border border-muted-200
+  dark:border-muted-800
+  shadow-xl shadow-muted-400/20
+  dark:shadow-muted-800/20
+  z-10
+"
+>
+<!--Menu-->
+<div class="col-span-4 p-6 space-y-2 bg-muted-50 dark:bg-muted-900">
+  <!--Menu item-->
+  <button
+    type="button"
+    data-tab="tab-1"
+    class="
+      w-full
+      flex
+      items-center
+      gap-2
+      py-2
+      px-3
+      rounded-lg
+      border-2
+      font-sans
+      text-sm
+      cursor-pointer
+      transition-all
+      duration-300
+      tw-accessibility
+      click-blur
+    "
+    :class="activeFilterTab === 'tab-1' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+    @click="activeFilterTab = 'tab-1'"
+  >
+    <i class="iconify w-4 h-4" data-icon="lucide:stethoscope"></i>
+    <span>Speciality</span>
+    <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+  </button>
+  <!--Menu item-->
+  <button
+    type="button"
+    data-tab="tab-2"
+    class="
+      w-full
+      flex
+      items-center
+      gap-2
+      py-2
+      px-3
+      rounded-lg
+      border-2
+      font-sans
+      text-sm
+      cursor-pointer
+      transition-all
+      duration-300
+      tw-accessibility
+      click-blur
+    "
+    :class="activeFilterTab === 'tab-2' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+    @click="activeFilterTab = 'tab-2'"
+  >
+    <i class="iconify w-4 h-4" data-icon="lucide:calendar-check-2"></i>
+    <span>Availability</span>
+    <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+  </button>
+  <!--Menu item-->
+  <button
+    type="button"
+    data-tab="tab-3"
+    class="
+      w-full
+      flex
+      items-center
+      gap-2
+      py-2
+      px-3
+      rounded-lg
+      border-2
+      font-sans
+      text-sm
+      cursor-pointer
+      transition-all
+      duration-300
+      tw-accessibility
+      click-blur
+    "
+    :class="activeFilterTab === 'tab-3' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+    @click="activeFilterTab = 'tab-3'"
+  >
+    <i class="iconify w-4 h-4" data-icon="lucide:map-pin"></i>
+    <span>Location</span>
+    <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+  </button>
+  <!--Menu item-->
+  <button
+    type="button"
+    data-tab="tab-4"
+    class="
+      w-full
+      flex
+      items-center
+      gap-2
+      py-2
+      px-3
+      rounded-lg
+      border-2
+      font-sans
+      text-sm
+      cursor-pointer
+      transition-all
+      duration-300
+      tw-accessibility
+      click-blur
+    "
+    :class="activeFilterTab === 'tab-4' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+    @click="activeFilterTab = 'tab-4'"
+  >
+    <i class="iconify w-4 h-4" data-icon="lucide:video"></i>
+    <span>Consultation</span>
+    <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+  </button>
+  <!--Menu item-->
+  <button
+    type="button"
+    data-tab="tab-5"
+    class="
+      w-full
+      flex
+      items-center
+      gap-2
+      py-2
+      px-3
+      rounded-lg
+      border-2
+      font-sans
+      text-sm
+      cursor-pointer
+      transition-all
+      duration-300
+      tw-accessibility
+      click-blur
+    "
+    :class="activeFilterTab === 'tab-5' ? 'text-primary-500 border-primary-500 bg-primary-500/10' : 'text-muted-500 hover:text-muted-600 dark:hover:text-muted-300 border-muted-50 dark:border-muted-900 hover:bg-muted-200 dark:hover:bg-muted-800'"
+    @click="activeFilterTab = 'tab-5'"
+  >
+    <i class="iconify w-4 h-4" data-icon="lucide:award"></i>
+    <span>Experience</span>
+    <i class="iconify w-4 h-4 ml-auto" data-icon="lucide:chevron-right"></i>
+  </button>
+</div>
+
+<!--Filters-->
+<div class="col-span-8 min-h-[310px] p-6">
+  <!--Date filter-->
+  <div x-show="activeFilterTab === 'tab-1'">
+    <NavbarSearchFiltersOne />
+  </div>
+
+  <!--Keywords filter-->
+  <div x-show="activeFilterTab === 'tab-2'">
+    <NavbarSearchFiltersTwo />
+  </div>
+
+  <!--Status filter-->
+  <div x-show="activeFilterTab === 'tab-3'">
+    <NavbarSearchFiltersThree />
+  </div>
+
+  <!--Accounts filter-->
+  <div x-show="activeFilterTab === 'tab-4'">
+    <NavbarSearchFiltersFour />
+  </div>
+
+  <!--Payment filter-->
+  <div x-show="activeFilterTab === 'tab-5'">
+    <NavbarSearchFiltersFive />
+  </div>
+</div>
+</div>

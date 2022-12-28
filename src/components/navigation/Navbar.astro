@@ -3,6 +3,7 @@ import Logo from "@components/base/Logo.astro";
 import ButtonMain from "@components/base/ButtonMain.astro";
 import ThemeToggler from "@components/base/ThemeToggler.astro";
 import Hamburger from "@components/base/Hamburger.astro";
+import NavbarSearchFilters from "@components/navigation/NavbarSearchFilters.astro";
 ---
 
 <div
@@ -29,56 +30,50 @@ import Hamburger from "@components/base/Hamburger.astro";
           >Dokto</span
         >
       </a>
-      <div class="hidden md:block relative">
+      <div
+        role="button"
+        class="hidden md:block relative"
+        @click.away="closeFilters()"
+      >
         <input
           type="text"
           class="peer pl-9 pr-4 py-2 h-10 text-sm leading-5 font-sans w-full rounded-xl bg-white text-slate-600 border border-slate-300 focus-visible:shadow-lg focus-visible:shadow-slate-300/50 dark:focus-visible:shadow-slate-800/50 placeholder:text-slate-300 dark:placeholder:text-slate-500 dark:bg-slate-800 dark:text-slate-200 dark:border-slate-700 outline-none focus-visible:outline-2 focus-visible:outline-dashed focus-visible:outline-slate-300 dark:focus-visible:outline-slate-600 focus-visible:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300"
           placeholder="Search your doctor..."
+          @focus="openFilters()"
         />
         <div
           class="absolute top-0 left-0 h-10 w-10 flex justify-center items-center text-slate-400 peer-focus:text-primary-500 peer-disabled:opacity-20 transition-colors duration-300"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            role="img"
-            class="h-4 w-4"
-            width="32"
-            height="32"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 24 24"
-            ><g
-              fill="none"
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              ><circle cx="11" cy="11" r="8"></circle><path
-                d="m21 21l-4.35-4.35"></path>
-            </g>
-          </svg>
+          <i class="iconify w-4 h-4" data-icon="lucide:search"></i>
         </div>
+        <NavbarSearchFilters />
       </div>
       <div class="flex items-center justify-center h-20 w-20 lg:hidden ml-auto">
         <Hamburger />
       </div>
     </div>
     <!-- Right -->
-    <div class=" flex-col items-center lg:justify-end gap-x-6"
-        :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-6 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'"
+    <div
+      class="flex-col items-center lg:justify-end gap-x-6"
+      :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-6 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'"
     >
       <div class="flex flex-col lg:flex-row items-center gap-x-6">
-        <div class="py-3 lg:py-5 text-slate-500 dark:text-slate-400">
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+          :class="activeStep === 'spy-1' ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
+        >
           <a href="#doctors">Doctors</a>
         </div>
-        <div class="py-3 lg:py-5 text-slate-500 dark:text-slate-400">
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+          :class="activeStep === 'spy-2' ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
+        >
           <a href="#product">Product</a>
         </div>
-        <div class="py-3 lg:py-5 text-slate-500 dark:text-slate-400">
+        <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+          :class="activeStep === 'spy-3' ? 'text-primary-500 after:bg-primary-500 after:w-full' : 'text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 after:w-0'"
+        >
           <a href="#pricing">Pricing</a>
         </div>
-        <div class="py-3 lg:py-5 text-slate-500 dark:text-slate-400">
+        <div class="relative py-3 lg:py-5 text-slate-500 dark:text-slate-400 hover:text-muted-700 dark:hover:text-muted-100 transition-colors duration-300">
           <a href="#">Sign In</a>
         </div>
         <div class="py-3 lg:py-5">
@@ -86,7 +81,9 @@ import Hamburger from "@components/base/Hamburger.astro";
         </div>
       </div>
       <div class="w-full md:w-auto">
-        <ButtonMain to={"#"} class="'w-full md:w-[240px] lg:w-[110px]'">Signup</ButtonMain>
+        <ButtonMain to={"#"} class="'w-full md:w-[240px] lg:w-[110px]'"
+          >Signup</ButtonMain
+        >
       </div>
     </div>
   </div>

@@ -27,7 +27,7 @@ import Testimonials from "@components/content/Testimonials.astro";
         minititle="On-Demand Healthcare"
       />
 
-      <div class="grid md:grid-cols-3 ltablet:grid-cols-4 lg:grid-cols-4 gap-x-6 gap-y-12">
+      <div class="grid md:grid-cols-3 ltablet:grid-cols-4 lg:grid-cols-4 gap-x-6 gap-y-12"   x-intersect="activeStep = ''">
         <!-- Item -->
         <div>
           <IconBlock
@@ -113,7 +113,7 @@ import Testimonials from "@components/content/Testimonials.astro";
         class="'mx-auto text-center'"
       />
 
-      <div id="doctors" x-data="doctors()">
+      <div id="doctors" x-data="doctors()"  x-intersect="activeStep = 'spy-1'">
         <Toolbar />
 
         <!--Grid wrapper-->

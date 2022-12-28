@@ -34,7 +34,7 @@ document.onreadystatechange = function () {
         e.preventDefault();
         let hash = this.getAttribute("href");
         let target = document.querySelector(hash);
-        let headerOffset = 300;
+        let headerOffset = 100;
         let elementPosition = target.offsetTop;
         let offsetPosition = elementPosition - headerOffset;
 

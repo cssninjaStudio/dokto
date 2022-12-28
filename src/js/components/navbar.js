@@ -11,5 +11,13 @@ export function navbar() {
         this.scrolled = false;
       }
     },
+    isFiltersOpen: false,
+    activeFilterTab: 'tab-1',
+    openFilters() {
+      this.isFiltersOpen = true
+    },
+    closeFilters() {
+      this.isFiltersOpen = false
+    },
   };
 }
