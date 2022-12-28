@@ -1,50 +1,57 @@
-# Welcome to [Astro](https://astro.build)
+# 👋 Dokto
+> Dokto is a free landing page starter built by [cssninjaStudio](https://cssninja.io).
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/s/github/withastro/astro/tree/latest/examples/basics)
+[![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+![Screenshot](https://media.cssninja.io/products/dokto/product.png "Dokto")
 
-![basics](https://user-images.githubusercontent.com/4677417/186188965-73453154-fdec-4d6b-9c34-cb35c248ae5b.png)
+## ✌️ preview
 
+Check out the live demo by clicking [here](https://dokto.cssninja.io). 
+Dokto is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
 
-## 🚀 Project Structure
+## 👍 Features
 
-Inside of your Astro project, you'll see the following folders and files:
+* Astro v1.x
+* Nodejs v16.x
+* Bulma v0.9.x
+* ES6 support
+* Alpine v3.x
 
+## 👌 Usage
+
+1. Install Depedencies
+
+```sh
+pnpm i
 ```
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+
+2. Run in dev mode
+
+```sh
+pnpm dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Or build source
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```sh
+pnpm build
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🍔 Issues
 
-## 🧞 Commands
+If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
 
-All commands are run from the root of the project, from a terminal:
+* Issue definition
+* Expected behaviour
+* Actual behaviour
+* steps to reproduce
+* Already tried fixes (if relevant)
 
-| Command                | Action                                             |
-| :--------------------- | :------------------------------------------------- |
-| `npm install`          | Installs dependencies                              |
-| `npm run dev`          | Starts local dev server at `localhost:3000`        |
-| `npm run build`        | Build your production site to `./dist/`            |
-| `npm run preview`      | Preview your build locally, before deploying       |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
-| `npm run astro --help` | Get help using the Astro CLI                       |
+## 🎉 More
 
-## 👀 Want to learn more?
+Find more premium website and app templates on [Css Ninja](https://cssninja.io/).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🚀 About Us
+
+Css Ninja is a web design studio. We build handcrafted and polished templates that will give some hype to your startup or to your next project.
