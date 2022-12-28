@@ -8,7 +8,7 @@
 ## ✌️ preview
 
 Check out the live demo by clicking [here](https://dokto.cssninja.io). 
-Dokto is built with [Bulma](https://bulma.io) and [Alpine JS](https://github.com/alpinejs/alpine).
+Dokto is built with [Astro](https://astro.dev), [TailwindCSS](https://tailwindcss.com/) and [Alpine JS](https://github.com/alpinejs/alpine).
 
 ## 👍 Features
 
