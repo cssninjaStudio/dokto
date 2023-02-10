@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/cssninjaStudio/dokto/compare/v1.0.0...v1.0.1) (2022-12-28)
+
+
+### Bug Fixes
+
+* hero ([a2b1c01](https://github.com/cssninjaStudio/dokto/commit/a2b1c01ac159ee0e75d713493e7928a6e5433f30))
+
 ## 1.0.0 (2022-12-28)
 
 
