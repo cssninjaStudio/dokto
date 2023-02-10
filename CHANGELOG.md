@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/cssninjaStudio/dokto/compare/v1.0.1...v1.1.0) (2023-02-10)
+
+
+### Features
+
+* upgrade to Astro v2 ([69d7ea8](https://github.com/cssninjaStudio/dokto/commit/69d7ea885fd9a3943664ae2c83c419bb273b54cb))
+
 ### [1.0.1](https://github.com/cssninjaStudio/dokto/compare/v1.0.0...v1.0.1) (2022-12-28)
 
 
