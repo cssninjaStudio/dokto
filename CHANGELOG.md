@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/cssninjaStudio/dokto/compare/v1.1.0...v1.2.0) (2023-05-03)
+
+
+### Features
+
+* upgrade dependencies + add unplugin-fonts ([581a681](https://github.com/cssninjaStudio/dokto/commit/581a681d43ffd5dd92d24ab09f00c72da9fe27b1))
+
 ## [1.1.0](https://github.com/cssninjaStudio/dokto/compare/v1.0.1...v1.1.0) (2023-02-10)
 
 
