@@ -3,6 +3,13 @@
   "type": "module",
   "version": "1.2.0",
   "private": true,
+  "author": {
+    "name": "cssninjaStudio <hello@cssninja.io> (https://cssninja.io)"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
