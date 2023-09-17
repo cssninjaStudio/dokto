@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/cssninjaStudio/dokto/compare/v1.2.0...v1.3.0) (2023-09-17)
+
+
+### Features
+
+* migrate to Astro 3 ([5d67e6a](https://github.com/cssninjaStudio/dokto/commit/5d67e6a1ce4eff68b32973046dc6b525dc704e80))
+* use variable fonts from fontsources ([b6348ba](https://github.com/cssninjaStudio/dokto/commit/b6348bae7a26b9ca42b63f035833a9aa293803b7))
+
+
+### Bug Fixes
+
+* upgrade engines to node 18 and pnpm 8 ([3e6550e](https://github.com/cssninjaStudio/dokto/commit/3e6550e86ee425e9a75a726440d784b9e78dd709))
+
 ## [1.2.0](https://github.com/cssninjaStudio/dokto/compare/v1.1.0...v1.2.0) (2023-05-03)
 
 
