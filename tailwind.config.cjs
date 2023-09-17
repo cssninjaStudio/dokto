@@ -49,8 +49,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        heading: ["Inter", "sans-serif"],
+        sans: ["Inter Variable", "sans-serif"],
+        heading: ["Inter Variable", "sans-serif"],
       },
     },
   },
