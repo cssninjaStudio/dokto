@@ -56,9 +56,7 @@ module.exports = {
   },
   plugins: [
     require("@tailwindcss/typography"),
-    require("@tailwindcss/line-clamp"),
     require("@tailwindcss/aspect-ratio"),
-    require("@vidstack/player/tailwind.cjs"),
 		//Additional utilities
 		plugin(function ({ addUtilities }) {
       addUtilities({
