@@ -12,8 +12,8 @@ Dokto is built with [Astro](https://astro.build), [TailwindCSS](https://tailwind
 
 ## 👍 Features
 
-* Astro v1.x
-* Nodejs v16.x
+* Astro v3.x
+* Nodejs v18.x
 * Bulma v0.9.x
 * ES6 support
 * Alpine v3.x
