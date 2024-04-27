@@ -3,7 +3,7 @@ const { class: className, icon, title, text } = Astro.props;
 ---
 
 <div class="font-sans">
-  <i class="iconify w-7 h-7 mb-2" :class={className} data-icon={icon}></i>
+  <iconify-icon class="iconify w-7 h-7 flex items-center justify-center text-3xl mb-2" :class={className} icon={icon}></iconify-icon>
   <h4 class="font-light text-lg mb-2 text-muted-800 dark:text-muted-100">{title}</h4>
   <p class="text-sm text-muted-500 dark:text-muted-400">{text}</p>
 </div>

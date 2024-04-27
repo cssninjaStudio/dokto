@@ -3,7 +3,7 @@ import Alpine from "alpinejs";
 import intersect from "@alpinejs/intersect";
 import persist from "@alpinejs/persist";
 import collapse from "@alpinejs/collapse";
-import Iconify from "@iconify/iconify";
+import 'iconify-icon';
 
 window.Alpine = Alpine;
 //Init collapse plugin
