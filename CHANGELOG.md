@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/cssninjaStudio/dokto/compare/v1.3.0...v1.4.0) (2024-04-27)
+
+
+### Features
+
+* migrate to iconify-icon, update dependencies ([232ec47](https://github.com/cssninjaStudio/dokto/commit/232ec47b8c1824b6b44aa117f7eada3a7a2a0bc7))
+
 ## [1.3.0](https://github.com/cssninjaStudio/dokto/compare/v1.2.0...v1.3.0) (2023-09-17)
 
 
