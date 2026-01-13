@@ -1,23 +1,58 @@
 ---
 import Polka from "@components/base/Polka.astro";
 import Card from "@components/base/Card.astro";
+
+import {
+  Swiper,
+  SwiperSlide,
+  SwiperWrapper,
+} from "astro-swiper";
+import type { SwiperOptions } from "swiper/types";
+
+const swiperOptions: SwiperOptions = {
+  loop: true,
+  autoplay: {
+    delay: 5000,
+  },
+  slidesPerView: 4,
+  spaceBetween: 20,
+  breakpoints: {
+    340: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+  },
+  navigation: {
+    nextEl: "testimonial-slider-next",
+    prevEl: "testimonial-slider-prev",
+  },
+};
+
 ---
 
 <div x-cloak class="relative overflow-hidden" x-intersect="activeStep = ''">
-  <div x-data="swiper()" class="carousel-container">
+  <div class="carousel-container">
     <div class="carousel-controls flex items-center justify-end mb-4">
-      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slidePrev()">
+      <button id="testimonial-slider-prev" class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300">
         <iconify-icon class="iconify" icon="lucide:arrow-left"></iconify-icon>
       </button>
 
-      <button class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300" @click="swiper.slideNext()">
+      <button id="testimonial-slider-next" class="w-10 h-10 flex items-center justify-center rounded-xl text-muted-600 hover:text-primary-600 dark:text-muted-300 dark:hover:text-muted-100 hover:bg-muted-200 dark:hover:bg-muted-900 transition-colors duration-300">
         <iconify-icon class="iconify" icon="lucide:arrow-right"></iconify-icon>
       </button>
     </div>
-    <div class="swiper-container" x-ref="container">
-      <div class="swiper-wrapper">
+    <Swiper options={swiperOptions} class="swiper-container" x-ref="container">
+      <SwiperWrapper>
         <!-- Slides -->
-        <div class="swiper-slide">
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -43,9 +78,9 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
+        </SwiperSlide>
         <!-- Slides -->
-        <div class="swiper-slide">
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -71,9 +106,9 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
+        </SwiperSlide>
         <!-- Slides -->
-        <div class="swiper-slide">
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -99,9 +134,9 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
+        </SwiperSlide>
         <!-- Slides -->
-        <div class="swiper-slide">
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -127,9 +162,9 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
+        </SwiperSlide>
         <!-- Slides -->
-        <div class="swiper-slide">
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -155,8 +190,8 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
-        <div class="swiper-slide">
+        </SwiperSlide>
+        <SwiperSlide>
           <Card class="'p-6'">
             <div class="w-full flex flex-col gap-8 font-sans">
               <iconify-icon class="iconify w-8 h-8 flex items-center justify-center text-3xl text-primary-600 dark:text-rose-500" icon="fa6-solid:quote-left"></iconify-icon>
@@ -182,8 +217,8 @@ import Card from "@components/base/Card.astro";
               </div>
             </div>
           </Card>
-        </div>
-      </div>
-    </div>
+        </SwiperSlide>
+      </SwiperWrapper>
+    </Swiper>
   </div>
 </div>
