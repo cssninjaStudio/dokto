@@ -2,6 +2,7 @@
   "name": "dokto",
   "type": "module",
   "version": "1.4.0",
+  "license": "MIT",
   "private": true,
   "author": {
     "name": "cssninjaStudio <hello@cssninja.io> (https://cssninja.io)"
