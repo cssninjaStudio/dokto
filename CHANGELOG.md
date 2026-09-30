@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/cssninjaStudio/dokto/compare/v1.4.0...v1.5.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([4c4b460](https://github.com/cssninjaStudio/dokto/commit/4c4b4605d1015aabbca8dba6c6104d79304e3c6f))
+
 ## [1.4.0](https://github.com/cssninjaStudio/dokto/compare/v1.3.0...v1.4.0) (2024-04-27)
 
 
